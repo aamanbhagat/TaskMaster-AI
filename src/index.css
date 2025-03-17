@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.highlight-row {
+  animation: highlight 1s ease-in-out;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: rgba(168, 85, 247, 0.1);
+  }
+  50% {
+    background-color: rgba(168, 85, 247, 0.2);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Add horizontal scrolling for the grid */
+.k-grid-content {
+  overflow-x: auto !important;
+}
+
+/* Ensure the grid header stays in place */
+.k-grid-header {
+  padding-right: 0 !important;
+}
+
+/* Style the notification popup */
+.k-notification-group {
+  z-index: 9999;
+}
+
+/* Dark mode styles */
+.dark {
+  color-scheme: dark;
+}
+
+.dark body {
+  @apply bg-gray-900;
+}
+
+/* Base text color overrides */
+.text-gray-500 {
+  @apply text-gray-700;
+}
+
+.text-gray-400 {
+  @apply text-gray-600;
+}
+
+/* KendoReact theme overrides for dark mode */
+.dark .k-button {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+.dark .k-button:hover {
+  @apply bg-gray-700;
+}
+
+.dark .k-input {
+  @apply bg-gray-800 text-white border-gray-700;
+}
+
+.dark .k-popup {
+  @apply bg-gray-800 text-white border-gray-700;
+}
